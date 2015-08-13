@@ -1,4 +1,11 @@
-Build the Dockerfile and run it with the `start.sh` script
+By running the `start.sh` script it will build the docker image, download the nw.js symbols and start the container with the symbols mounted to the correct folder.
+
+To find which port the server is exposed at, run `docker ps`
+
+```
+CONTAINER ID        IMAGE                               COMMAND                CREATED             STATUS              PORTS                     NAMES
+d93f28884555        pexip/mini-breakpad-server:latest   "/bin/sh -c 'bash -l   17 seconds ago      Up 16 seconds       0.0.0.0:49153->1127/tcp   sad_heisenberg
+```
 
 To upload minidumps, send a POST request to the server with the following fields:
 
